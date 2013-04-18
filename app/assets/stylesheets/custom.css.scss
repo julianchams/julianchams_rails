@@ -19,8 +19,8 @@ body.main {
 }
 
 .navbar-inverse .navbar-inner {
-  background-color: #FFF0E0;
-  border-color: #FFF0E0;
+  background-color: #F1C9AD;
+  border-color: #F1C9AD;
   background-image: none;
 }
 
@@ -52,22 +52,16 @@ body.main {
 .navbar .brand {
   font-size: 18px;
   font-weight: bold;
-  color: #8D1919;
+  color: #E62E8A;
   text-shadow: 0 1px 0 #330000;
   padding: 10px 20px 10px;
 }
 
-.navbar-inverse .brand:hover,
-.navbar-inverse .nav > li > a:hover,
+.navbar-inverse .brand:hover, 
 .navbar-inverse .brand:focus,
+.navbar-inverse .nav > li > a:hover,
 .navbar-inverse .nav > li > a:focus {
-  color: #E62E8A;
-}
-
-.navbar-inverse .nav > li > a:focus,
-.navbar-inverse .nav > li > a:hover {
-  color: #E62E8A;
-  background-color: transparent;
+  color: #FFFFD6;
 }
 
 .navbar-inverse .nav .active > a,
