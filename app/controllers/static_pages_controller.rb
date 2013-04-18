@@ -11,4 +11,16 @@ class StaticPagesController < ApplicationController
   def exhibitions
   end
 
+  def texts
+  end
+
+  def blog
+  end
+
+  def store
+  end
+
+  def links
+  end
+
 end

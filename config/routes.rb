@@ -7,6 +7,14 @@ JulianchamsRails::Application.routes.draw do
 
   get "static_pages/exhibitions"
 
+  get "static_pages/texts"
+
+  get "static_pages/blog"
+
+  get "static_pages/store"
+
+  get "static_pages/links"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
