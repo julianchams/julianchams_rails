@@ -1,1 +1,171 @@
 @import 'bootstrap';
+@import 'bootstrap-responsive';
+.with-background {
+  height: 1108px;
+  background-size: cover;
+  background-image: image-url("bckgrnd_finger.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body.main {
+	overflow-y: hidden;
+  margin-top: 40px;
+}
+
+.navbar-inner {
+  min-height: 20px;
+}
+
+.navbar-inverse .navbar-inner {
+  background-color: #FFF0E0;
+  border-color: #FFF0E0;
+  background-image: none;
+}
+
+.navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner {
+  padding: 0px;
+}
+
+.navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner {
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.navbar-text {
+  margin-bottom: 0;
+  line-height: 20px;
+  color: #777777;
+}
+
+.navbar-inverse .brand, .navbar-inverse .nav > li > a {
+  color: #400000;
+  text-shadow: 0 -0.25px 0 #330000;
+}
+
+.brand.active {
+  color: #ffffff;
+}
+
+.navbar .brand {
+  font-size: 18px;
+  font-weight: bold;
+  color: #8D1919;
+  text-shadow: 0 1px 0 #330000;
+  padding: 10px 20px 10px;
+}
+
+.navbar-inverse .brand:hover,
+.navbar-inverse .nav > li > a:hover,
+.navbar-inverse .brand:focus,
+.navbar-inverse .nav > li > a:focus {
+  color: #E62E8A;
+}
+
+.navbar-inverse .nav > li > a:focus,
+.navbar-inverse .nav > li > a:hover {
+  color: #E62E8A;
+  background-color: transparent;
+}
+
+.navbar-inverse .nav .active > a,
+.navbar-inverse .nav .active > a:hover,
+.navbar-inverse .nav .active > a:focus {
+  color: #E62E8A;
+  background-color: #111111;
+}
+
+nav.secondary ul.nav {
+	padding-left: 155px;
+}
+
+.fit-height {
+  height: 100%;
+}
+
+.fit-height > img {
+  height: 70%;
+}
+
+section {
+  margin-top: 60px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+p {
+  font-size: 12px;
+  line-height: 18px;
+  color: #0000000;
+  background-color: #ffffff;
+}
+
+.nav-list a {
+  font-size: 12px;
+}
+
+.nav-header a {
+  display: block;
+  padding: 3px 15px;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #999999;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+}
+
+span.caption {
+  font-style: italic;
+}
+
+span.work-title {
+  font-weight: bold;
+}
+
+img.work-photo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.thumbnail {
+  border: none;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+  -webkit-box-shadow: 0 0 0;
+     -moz-box-shadow: 0 0 0;
+          box-shadow: 0 0 0;
+}
+
+a.thumbnail:hover,
+a.thumbnail:focus {
+  border: none;
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+/* target phone and tablet*/
+@media (max-width: 979px) {
+  .with-background {
+    margin-top: -20px;
+  }
+}
+
+/*target phone only*/
+@media (max-width: 768px){
+  .with-background {
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+}
