@@ -15,6 +15,20 @@ JulianchamsRails::Application.routes.draw do
 
   get "static_pages/links"
 
+  get "static_pages/bio"
+
+  get "static_pages/statement"
+
+  get "static_pages/cv"
+
+  get "static_pages/contact"
+
+  get "static_pages/daily_puzzles"
+
+  get "static_pages/hanging_out_inside"
+
+  get "static_pages/internal_synthesis"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
