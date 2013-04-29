@@ -1,17 +1,16 @@
 @import 'bootstrap';
 @import 'bootstrap-responsive';
-.with-background {
-  height: 1108px;
+
+html.homepage { 
+  background: url(bckgrnd_finger.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  background-image: image-url("bckgrnd_finger.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 body.main {
 	overflow-y: hidden;
-  margin-top: 40px;
 }
 
 .navbar-inner {
@@ -145,21 +144,18 @@ a.thumbnail:focus {
           box-shadow: none;
 }
 
-.centered-text {
+div {
   text-align: center;
+}
+
+.text-left {
+  text-align: left;
 }
 
 /* target phone and tablet*/
 @media (max-width: 979px) {
-  .with-background {
-    margin-top: -20px;
-  }
 }
 
 /*target phone only*/
 @media (max-width: 768px){
-  .with-background {
-    margin-right: -20px;
-    margin-left: -20px;
-  }
 }
