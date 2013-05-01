@@ -18,4 +18,5 @@ $git clone https://github.com/julianchams/julianchams_rails.git
 $cd julianchams
 $rails s
 ```
+
 *    In your browser window go to http://localhost:3000
