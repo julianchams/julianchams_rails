@@ -1,4 +1,7 @@
 JulianchamsRails::Application.routes.draw do
+  resources :works
+
+
   get "static_pages/home" 
   root to: "static_pages#home"
 

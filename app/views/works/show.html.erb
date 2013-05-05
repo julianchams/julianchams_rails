@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @work.title %>
+</p>
+
+<p>
+  <b>Medium:</b>
+  <%= @work.medium %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @work.size %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @work.date %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @work.description %>
+</p>
+
+<p>
+  <b>Photo:</b>
+  <%= @work.photo %>
+</p>
+
+<p>
+  <b>Video:</b>
+  <%= @work.video %>
+</p>
+
+<p>
+  <b>Webapp:</b>
+  <%= @work.webapp %>
+</p>
+
+
+<%= link_to 'Edit', edit_work_path(@work) %> |
+<%= link_to 'Back', works_path %>
