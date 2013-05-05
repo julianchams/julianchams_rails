@@ -1,45 +1,31 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Title:</b>
-  <%= @work.title %>
-</p>
-
-<p>
-  <b>Medium:</b>
-  <%= @work.medium %>
-</p>
-
-<p>
-  <b>Size:</b>
-  <%= @work.size %>
-</p>
-
-<p>
-  <b>Date:</b>
-  <%= @work.date %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @work.description %>
-</p>
-
-<p>
-  <b>Photo:</b>
-  <%= @work.photo %>
-</p>
-
-<p>
-  <b>Video:</b>
-  <%= @work.video %>
-</p>
-
-<p>
-  <b>Webapp:</b>
-  <%= @work.webapp %>
-</p>
-
-
-<%= link_to 'Edit', edit_work_path(@work) %> |
-<%= link_to 'Back', works_path %>
+<section>
+  <div class="container-fluid">     
+    <div class="row-fluid">
+      <div class="span2 text-left">
+        <ul class="nav nav-list">
+          <li class="nav-header"><a href="works.html">Index</a></li>
+          <li><a href="internal_synthesis.html">Internal Synthesis</a></li>
+          <li><a href="hanging_out_inside.html">Hanging Out Inside</a></li>
+          <li class="active"><a href="daily_puzzles.html">Daily Puzzles</a></li>
+        </ul>
+      </div>
+      <div class="span10">
+        <div class="fit-height">
+          <!-- INSERT SLIDESHOW HERE -->
+          <p>
+            <span class="work-title">
+              <%=@work.title%><br>
+            </span>
+            <span class="caption">
+              <%=@work.location%><br>
+              <%=@work.size%><br>
+              <%=@work.medium%><br>
+              &copy; <%=@work.date%><br>
+            </span>
+          </p>
+          <p><%=@work.description%></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

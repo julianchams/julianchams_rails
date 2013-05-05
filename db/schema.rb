@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130502233331) do
+ActiveRecord::Schema.define(:version => 20130505185848) do
 
   create_table "works", :force => true do |t|
     t.string   "title"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20130502233331) do
     t.string   "webapp"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "location"
   end
 
 end

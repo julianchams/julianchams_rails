@@ -63,7 +63,6 @@ min-width: auto;
 .navbar-inverse .nav > li > a:hover,
 .navbar-inverse .nav > li > a:focus {
   color: #FFFFD6;
-  font-weight: bolder;
 }
 
 .navbar-inverse .nav .active > a,
@@ -156,12 +155,12 @@ section a:hover {
   text-decoration: none;
 }
 
-section div {
-  text-align: center;
+div.text-left {
+  text-align: left;
 }
 
-.text-left {
-  text-align: left;
+section div {
+  text-align: center;
 }
 
 h3 {
