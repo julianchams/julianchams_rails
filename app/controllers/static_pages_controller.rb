@@ -6,7 +6,7 @@ class StaticPagesController < ApplicationController
   def about
   end
 
-  def works
+  def cv
   end
 
   def exhibitions
@@ -18,31 +18,7 @@ class StaticPagesController < ApplicationController
   def blog
   end
 
-  def store
-  end
-
   def links
-  end
-
-  def bio
-  end
-
-  def statement
-  end
-
-  def cv
-  end
-
-  def contact
-  end
-
-  def daily_puzzles
-  end
-
-  def hanging_out_inside
-  end
-
-  def internal_synthesis
   end
 
 end

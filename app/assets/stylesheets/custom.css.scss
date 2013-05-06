@@ -94,6 +94,7 @@ ul.nav {
 
 section {
   margin-top: 60px;
+  padding-bottom: 20px;
   font-family: 'Orienta', sans-serif;
 }
 
@@ -243,18 +244,26 @@ h3 {
 }
 
 
+/* target larger*/
 
-/* target larger
-@media (min-width: 979px) and (max-width: 1500px) {
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 980px) and (max-width: 1500px) {
   .navbar-inner .container {
   width: auto;
   padding-left: 20px;
   padding-right: 20px;
   margin-left: -5px;
   }
-}*/
+}
+
 
 /* target phone and tablet*/
+
+@media (min-width: 768px) and (max-width: 979px) {
+}
+
 @media (max-width: 979px) {
   section {
   margin-top: 0px;
@@ -262,5 +271,9 @@ h3 {
 }
 
 /*target phone only*/
+
 @media (max-width: 768px){
+}
+
+@media (max-width: 480px) {
 }
