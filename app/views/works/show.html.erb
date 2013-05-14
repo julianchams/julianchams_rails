@@ -11,19 +11,42 @@
       </div>
       <div class="span10">
         <div class="fit-height text-left">
-          <!-- INSERT SLIDESHOW HERE -->
-          <p>
-            <span class="work-title">
-              <%=@work.title%><br>
-            </span>
-            <span class="caption">
-              <%=@work.size%><br>
-              <%=@work.medium%><br>              
-              <%=@work.location%><br>
-              &copy; <%=@work.date%><br>
-            </span>
-          </p>
-          <p><%=@work.description%></p>
+          <!-- SLIDESHOW BEGINS -->
+          <div id="myCarousel" class="carousel slide">
+            <div class="carousel-inner">
+              <% @photographs.each do |project| %>
+                <div class="item">
+                  <div><%= image_tag(photograph.url) %></div>
+                  <p>
+                    <span class="work-title">
+                      <%=@work.title%><br>
+                    </span>
+                    <span class="caption">
+                      <% if @work.size!="" %>
+                        <%=@work.size%><br>
+                      <% end %>
+                      <% if @work.medium!="" %>
+                        <%=@work.medium%><br>
+                      <% end %>
+                      <% if @work.location!="" %>
+                        <%=@work.location%><br>
+                      <% end %>
+                      <% if @work.date!="" %>
+                        &copy; <%=@work.date%><br>
+                      <% end %>
+                      <% if @work.description!="" %>
+                        <p><%=@work.description%></p>
+                      <% end %>
+                    </span>
+                  </p>
+                </div>
+              <% end %>
+            </div>
+            <!-- Carousel nav -->
+            <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+          </div>    
+          <!-- SLIDESHOW ENDS -->
         </div>
       </div>
     </div>

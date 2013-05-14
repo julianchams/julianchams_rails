@@ -1,0 +1,48 @@
+work
+	photo
+	title
+	medium
+	size
+	date
+	description
+
+		if video:
+			video
+
+		if web project:
+			mini app
+
+		if sell:
+			price
+
+blogpost
+	date and time
+	content
+	photo/video
+	external link
+	comments
+	likes
+
+
+text
+	project title	
+	description
+	content
+	date
+	external link
+
+user
+	user id
+	admin status
+	name
+	email
+	newsletter
+
+	
+	if admin:
+		bio
+		cv
+		statement
+		contact
+		photo
+

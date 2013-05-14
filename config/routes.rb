@@ -1,4 +1,7 @@
 JulianchamsRails::Application.routes.draw do
+  resources :photographs
+
+
   resources :works
 
   get "static_pages/home" 
