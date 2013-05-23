@@ -10,6 +10,18 @@ html.homepage {
   background-size: cover;
 }
 
+html { 
+  background: url(bckgrnd_nofinger.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  background-color: transparent;
+}
+
 .navbar-inner {
   min-height: 20px;
 }
@@ -50,6 +62,14 @@ ul.nav {
   .nav-collapse .dropdown-menu a {
     font-weight: 400;
   }
+
+/* ATTEMP TO MAKE DROPDOWN HOVER BACKRGOUND COLOR GREY INSTEAD OF BLACK
+.navbar-inverse .nav-collapse .nav > li > a:hover,
+.navbar-inverse .nav-collapse .nav > li > a:focus,
+.navbar-inverse .nav-collapse .dropdown-menu a:hover,
+.navbar-inverse .nav-collapse .dropdown-menu a:focus {
+  background-color: #303030;
+} */
 
 .navbar-inverse .brand, .navbar-inverse .nav > li > a {
   color: #400000;
@@ -96,6 +116,7 @@ section {
   margin-top: 60px;
   padding-bottom: 20px;
   font-family: 'Orienta', sans-serif;
+  color: #E8E8E8;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -105,8 +126,6 @@ h1, h2, h3, h4, h5, h6 {
 p {
   font-size: 12px;
   line-height: 18px;
-  color: #0000000;
-  background-color: #ffffff;
 }
 
 .nav-list a {
@@ -164,11 +183,15 @@ a.thumbnail:focus {
 }
 
 a {
-  color: black;
+  color: #E8E8E8 ;
+}
+
+h1, h2, h3, h4 {
+  color: white;
 }
 
 section a:hover {
-  color: #E62E8A;
+  color: white;
   text-decoration: none;
 }
 
