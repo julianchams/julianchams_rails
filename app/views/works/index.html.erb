@@ -2,13 +2,12 @@
   <div class="container-fluid">  
     <div class="row-fluid">
       <div class="span12">
-        <h3>Works</h3>
-          <ul class="thumbnails">
+        <h1>WORKS</h1>
+          <ul>
             <% @works.each do |work| %>
-              <li class="span4">
+              <li class="span00">
                 <a href="/works/<%=work.id%>" class="thumbnail">
                   <%= image_tag(work.photo)%>
-                <h5><%=work.title%></h5>
                 </a>
               </li>
             <% end %>
