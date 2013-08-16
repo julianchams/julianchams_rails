@@ -17,8 +17,7 @@ JulianchamsRails::Application.routes.draw do
 
   get "static_pages/links"
 
-  get "static_pages/cv"
-
+  get "static_pages/work"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

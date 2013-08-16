@@ -3,13 +3,13 @@ class StaticPagesController < ApplicationController
     @home_page = true
   end
 
-  def about
-  end
-
-  def cv
+  def work
   end
 
   def exhibitions
+  end
+
+  def about
   end
 
   def texts
