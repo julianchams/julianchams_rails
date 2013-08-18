@@ -34,4 +34,7 @@ JulianchamsRails::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # Set up default URL options (for Devise)
+  config.action_mailer.default_url_option = { :host => 'localhost:3000'}
 end

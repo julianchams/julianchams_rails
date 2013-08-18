@@ -1,11 +1,22 @@
 JulianchamsRails::Application.routes.draw do
+
+  devise_for :users
+
+  match '/about' => 'static_pages#about'
+  match '/exhibitions' => 'static_pages#exhibitions'
+  match '/texts' => 'static_pages#texts'
+  match '/blog' => 'static_pages#blog'
+  match '/links' => 'static_pages#links'
+  match '/work' => 'static_pages#work'
+
+  root to: "static_pages#home"
+
   resources :photographs
 
 
   resources :works
 
   get "static_pages/home" 
-  root to: "static_pages#home"
 
   get "static_pages/about"
 
