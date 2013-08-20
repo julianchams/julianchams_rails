@@ -1,5 +1,7 @@
 JulianchamsRails::Application.routes.draw do
 
+  resources :exhibitions
+
   devise_for :users
 
   match '/about' => 'static_pages#about'
