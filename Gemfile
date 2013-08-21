@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 gem 'bootstrap-sass', '2.1'
+gem 'carrierwave'
+gem 'mini_magick'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -9,6 +11,8 @@ gem 'bootstrap-sass', '2.1'
 group :development do
 gem 'sqlite3', '1.3.5'
 gem 'devise'
+gem 'better_errors'
+gem 'quiet_assets'
 end
 
 group :production do 
