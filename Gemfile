@@ -13,6 +13,11 @@ gem 'sqlite3', '1.3.5'
 gem 'devise'
 gem 'better_errors'
 gem 'quiet_assets'
+gem 'guard-livereload'
+gem 'guard-rails'
+gem 'rb-fchange', require: false
+gem 'rb-fsevent', require: false
+gem 'rb-inotify', require: false
 end
 
 group :production do 

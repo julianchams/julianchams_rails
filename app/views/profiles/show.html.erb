@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <%= @profile.bio %>
+</p>
+
+<p>
+  <%= @profile.statement %>
+</p>
+
+<p>
+  <%= @profile.email %>
+</p>
+
+<p>
+  <%= @profile.tel %>
+</p>
+	
+<% end %>
+
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', exhibitions_path %>

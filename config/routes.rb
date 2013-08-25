@@ -2,6 +2,9 @@ JulianchamsRails::Application.routes.draw do
 
   resources :images
 
+  resources :profiles, only: [:show, :edit, :update]
+  # find a way to reroute profile page to be "about" page
+  # match "profiles/:id" as => "about" 
 
   resources :exhibitions
   

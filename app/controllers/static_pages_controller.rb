@@ -1,4 +1,6 @@
 class StaticPagesController < ApplicationController
+  before_filter :set_profile
+
   def home
     @home_page = true
   end
@@ -10,6 +12,7 @@ class StaticPagesController < ApplicationController
   end
 
   def about
+    user = User.first
   end
 
   def texts
@@ -20,5 +23,11 @@ class StaticPagesController < ApplicationController
 
   def links
   end
+
+  private
+    def set_profile
+      user=User.first
+      @profile = user.profile
+    end
 
 end
