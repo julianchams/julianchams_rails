@@ -1,5 +1,8 @@
 JulianchamsRails::Application.routes.draw do
 
+  resources :places
+
+
   resources :images
 
   resources :profiles, only: [:show, :edit, :update]

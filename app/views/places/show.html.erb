@@ -1,0 +1,17 @@
+<section>
+	<p id="notice"><%= notice %></p>
+
+	<p>
+	  <b>Title:</b>
+	  <%= @place.title %>
+	</p>
+
+	<p>
+	  <b>Kind:</b>
+	  <%= @place.kind %>
+	</p>
+
+
+	<%= link_to 'Edit', edit_place_path(@place) %> |
+	<%= link_to 'Back', places_path %>
+</section>

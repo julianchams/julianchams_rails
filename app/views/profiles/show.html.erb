@@ -1,23 +1,25 @@
-<p id="notice"><%= notice %></p>
+<section>
 
-<p>
-  <%= @profile.bio %>
-</p>
+	<p id="notice"><%= notice %></p>
 
-<p>
-  <%= @profile.statement %>
-</p>
+	<p>
+	  <%= @profile.bio %>
+	</p>
 
-<p>
-  <%= @profile.email %>
-</p>
+	<p>
+	  <%= @profile.statement %>
+	</p>
 
-<p>
-  <%= @profile.tel %>
-</p>
-	
-<% end %>
+	<p>
+	  <%= @profile.email %>
+	</p>
 
+	<p>
+	  <%= @profile.tel %>
+	</p>
+		
 
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', exhibitions_path %>
+	<%= link_to 'Edit', edit_profile_path(@profile) %> |
+	<%= link_to 'Back', exhibitions_path %>
+
+</section>

@@ -22,6 +22,16 @@
     <%= f.file_field :image %>
     <%= f.hidden_field :image_cache %>
 
+ <div class="field">
+    <%= f.label :exhibition_id %>
+    <%= f.collection_select :exhibition_id, Exhibition.all, :id, :title %>
+  </div>
+
+ <div class="field">
+    <%= f.label :place_id %>
+    <%= f.collection_select :place_id, Place.all, :id, :title %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
