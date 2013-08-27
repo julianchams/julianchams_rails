@@ -3,7 +3,6 @@ CarrierWave.configure do |config|
 	# In production, use S3 through Fog
   # In development, use filesystem and processing
   # In testing, use filesystem and no processing
-
   # To use S3 CNAME, set bucket name to the CNAME:
   # photos.example.com
   # Set s3_cnamed to true.
