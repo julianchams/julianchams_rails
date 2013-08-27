@@ -1,6 +1,18 @@
 <section>
 	<p id="notice"><%= notice %></p>
 
+  <%= nested_form_for @exhibition, :html=>{:multipart => true } do |f| %>
+  <% if @exhibition.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@exhibition.errors.count, "error") %> prohibited this exhibition from being saved:</h2>
+      <ul>
+        <% @exhibition.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+       <% end %>
+      </ul>
+    </div>
+  <% end %>
+
 	<p>
 	  <b>Title:</b>
 	  <%= @place.title %>
@@ -11,6 +23,30 @@
 	  <%= @place.kind %>
 	</p>
 
+  <% @exhibition.images.each do |i| %>
+    <%= image_tag(i.image.url) %>
+  <% end %>
+
+  <fieldset id="images">
+  <%= f.fields_for :images do |image|  %>
+    <div class="field"
+      <%= image.label :title %><br/>
+      <%= image.text_area :title %>
+    </div>
+    <div class="field"
+      <%= image.label :image %><br/>
+      <%= image.file_field :image %>
+      <%= image.hidden_field :image_cache %>
+    </div>
+    <%= image.link_to_remove "Remove this image" %>
+  <% end %>
+  </fieldset>
+
+  <%= f.link_to_add "Add images", :images %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
 
 	<%= link_to 'Edit', edit_place_path(@place) %> |
 	<%= link_to 'Back', places_path %>
