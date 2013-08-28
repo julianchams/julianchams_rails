@@ -1,4 +1,4 @@
-<%= form_for(@place) do |f| %>
+<%= nested_form_for(@place) do |f| %>
   <% if @place.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@place.errors.count, "error") %> prohibited this place from being saved:</h2>
@@ -19,6 +19,23 @@
     <%= f.label :kind %><br />
     <%= f.text_field :kind %>
   </div>
+
+  <fieldset>
+    <%= f.fields_for :images do |image|  %>
+      <div class="field"
+        <%= image.label :title %><br/>
+        <%= image.text_area :title %>
+      </div>
+      <div class="field"
+        <%= image.label :image %><br/>
+        <%= image.file_field :image %>
+        <%= image.hidden_field :image_cache %>
+      </div>
+      <%= image.link_to_remove "Remove this image" %>
+    <% end %>
+  </fieldset>
+
+  <%= f.link_to_add "Add images", :images %>
   <div class="actions">
     <%= f.submit %>
   </div>

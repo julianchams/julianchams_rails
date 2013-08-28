@@ -63,14 +63,6 @@ ul.nav {
     font-weight: 400;
   }
 
-/* ATTEMP TO MAKE DROPDOWN HOVER BACKRGOUND COLOR GREY INSTEAD OF BLACK
-.navbar-inverse .nav-collapse .nav > li > a:hover,
-.navbar-inverse .nav-collapse .nav > li > a:focus,
-.navbar-inverse .nav-collapse .dropdown-menu a:hover,
-.navbar-inverse .nav-collapse .dropdown-menu a:focus {
-  background-color: #303030;
-} */
-
 .navbar-inverse .brand, .navbar-inverse .nav > li > a {
   color: #400000;
   text-shadow: 0 -0.25px 0 #330000;
@@ -123,6 +115,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto', sans-serif;
 }
 
+h1 {
+  text-align: center;
+}
+
 p {
   font-size: 13px;
   line-height: 18px;
@@ -146,11 +142,12 @@ p {
   text-transform: uppercase;
 }
 
-/*FOR USER AUTHENTICATION NOTICES AND ALERTS
-.notice, .alert {
-  padding-top: 40px;
+/*FOR NOTICES AND ALERTS*/
+.notice {
+  margin-top: 60px;
+  font-size: 14px;
+  font-color: white;
 }
-*/
 
 
 span.caption {
@@ -206,14 +203,6 @@ h1, h2, h3, h4 {
 section a:hover {
   color: white;
   text-decoration: none;
-}
-
-div.text-left {
-  text-align: left;
-}
-
-section div {
-  text-align: center;
 }
 
 h3 {

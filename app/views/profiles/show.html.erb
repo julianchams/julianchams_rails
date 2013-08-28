@@ -1,25 +1,10 @@
-<section>
+<p id="notice"><%= notice %></p>
 
-	<p id="notice"><%= notice %></p>
-
-	<p>
-	  <%= @profile.bio %>
-	</p>
-
-	<p>
-	  <%= @profile.statement %>
-	</p>
-
-	<p>
-	  <%= @profile.email %>
-	</p>
-
-	<p>
-	  <%= @profile.tel %>
-	</p>
-		
-	<%= image_tag @profile.profile_pic.medium.url %>	
-
-	<%= link_to 'Edit', edit_profile_path(@profile) %>
+<p><%= @profile.bio %></p>
+<p><%= @profile.statement %></p>
+<p><%= @profile.email %></p>
+<p><%= @profile.tel %></p>
 	
-</section>
+<%= image_tag @profile.profile_pic.medium.url %>	
+
+<%= link_to 'Edit', edit_profile_path(@profile) %>

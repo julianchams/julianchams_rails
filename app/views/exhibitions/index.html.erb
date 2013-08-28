@@ -1,32 +1,33 @@
-<section>
-  <div class="container-fluid">  
-    <div class="row-fluid">
-      <div class="span12">
-        <h1>EXHIBITIONS</h1>
+<div class="container-fluid">  
+  <div class="row-fluid">
+    <div class="span12">
+      <h1>EXHIBITIONS</h1>
 
-        <% @exhibitions.each do |exhibition| %>
-          
-          <%= image_tag exhibition.images.first.image.thumb.url %>
+      <% @exhibitions.each do |exhibition| %>
+        
+        <%= image_tag exhibition.images.first.image.small.url %>
 
-          <h5><%= link_to exhibition.title, exhibition_path(exhibition) %></h5>
+        <h5><%= link_to exhibition.title, exhibition_path(exhibition) %></h5>
 
-          <p><%= exhibition.location %> | <%= exhibition.date %><br>
-          <%= exhibition.description %></p>
-          <% if user_signed_in? %>
-            <br>
-            <%= link_to 'Show', exhibition %>
-             | 
-            <%= link_to 'Edit', edit_exhibition_path(exhibition) %>
-             | 
-            <%= link_to 'Destroy', exhibition, method: :delete, data: { confirm: 'Are you sure?' } %>
-             | 
-          <% end %>
-        <% end %>
-
+        <p><%= exhibition.location %> | <%= exhibition.date %><br>
+        <%= exhibition.description %></p>
         <% if user_signed_in? %>
-          <%= link_to 'New Exhibition', new_exhibition_path %>
+          <br>
+          <%= link_to 'View', exhibition %>
+           | 
+          <%= link_to 'Edit', edit_exhibition_path(exhibition) %>
+           | 
+          <%= link_to 'Destroy', exhibition, method: :delete, data: { confirm: 'Are you sure?' } %>
+           | 
         <% end %>
-      </div>
+        <br>
+      <% end %>
+
+
+
+      <% if user_signed_in? %>
+        <%= link_to 'New Exhibition', new_exhibition_path %>
+      <% end %>
     </div>
   </div>
-</section>
+</div>

@@ -1,50 +1,49 @@
-  <%= nested_form_for(@exhibition) do |f| %>
-    <% if @exhibition.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@exhibition.errors.count, "error") %> prohibited this exhibition from being saved:</h2>
+<%= nested_form_for(@exhibition) do |f| %>
+  <% if @exhibition.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@exhibition.errors.count, "error") %> prohibited this exhibition from being saved:</h2>
 
-        <ul>
-        <% @exhibition.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-        </ul>
-      </div>
-    <% end %>
-
-    <div class="field">
-      <%= f.label :title %><br />
-      <%= f.text_field :title %>
+      <ul>
+      <% @exhibition.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
     </div>
-    <div class="field">
-      <%= f.label :date %><br />
-      <%= f.text_field :date %>
-    </div>
-    <div class="field">
-      <%= f.label :location %><br />
-      <%= f.text_field :location %>
-    </div>
-    <div class="field">
-      <%= f.label :description %><br />
-      <%= f.text_field :description %>
-    </div>
-    <fieldset id="images">
-  <%= f.fields_for :images do |image|  %>
-    <div class="field"
-      <%= image.label :title %><br/>
-      <%= image.text_area :title %>
-    </div>
-    <div class="field"
-      <%= image.label :image %><br/>
-      <%= image.file_field :image %>
-      <%= image.hidden_field :image_cache %>
-    </div>
-    <%= image.link_to_remove "Remove this image" %>
   <% end %>
-  </fieldset>
 
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br />
+    <%= f.text_field :date %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+
+  <fieldset>
+    <%= f.fields_for :images do |image|  %>
+      <div class="field"
+        <%= image.label :image %><br/>
+        <%= image.file_field :image %>
+        <%= image.hidden_field :image_cache %>
+      </div>
+      <%= image.link_to_remove "Remove this image" %>
+      <br>
+    <% end %>
+  </fieldset>
+  <br>
   <%= f.link_to_add "Add images", :images %>
 
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-  <% end %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>

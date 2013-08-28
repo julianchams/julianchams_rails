@@ -33,11 +33,9 @@
 		   </div>
 		  </nav>
 		</header>
-		<% if notice || alert %>
-			<p class="notice"><%= notice %></p>
-			<p class="alert"><%= alert %></p>
-		<% end %>
-		<%= yield %>
+		<section>
+			<%= yield %>
+		</section>
 		<footer>
 		</footer>
 	</body>

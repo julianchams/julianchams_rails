@@ -1,10 +1,6 @@
-<section>
-    
-  <p id="notice"><%= notice %></p>
+<p id="notice"><%= notice %></p>
 
   <h1><%= @exhibition.title %></h1>
-
-
 
 <ul class="bxslider">
    <% @exhibition.images.each do |i| %>
@@ -12,21 +8,17 @@
   <% end %>
 </ul>
 
-
-
-
   <p> <%= @exhibition.description %> </p>
   <p> <%= @exhibition.location %> | <%= @exhibition.date %> </p>
 
-  <%= link_to 'Edit', edit_exhibition_path(@exhibition) %> |
+  <%= link_to 'Edit', edit_exhibition_path(@exhibition) %>
+   |
   <%= link_to 'Back', exhibitions_path %>
-
-</section>
 
 
 <%= javascript_include_tag "jquery.bxslider.min.js" %>
 <script type="text/javascript">
-$(document).ready(function(){
-  $('.bxslider').bxSlider();
-});
+// $(document).ready(function(){
+//   $('.bxslider').bxSlider();
+// });
 </script>

@@ -1,36 +1,34 @@
-<section>
-	<p id="notice"><%= notice %></p>
+<p id="notice"><%= notice %></p>
 
-	<p>
-	  <b>Title:</b>
-	  <%= @image.title %>
-	  <%= image_tag(@image.image.url) if @image.image? %>
+<p>
+  <b>Title:</b>
+  <%= @image.title %>
+  <%= image_tag(@image.image.url) if @image.image? %>
 
-	  <b>Thumb:</b>
-	  <%= image_tag(@image.image.thumb.url) if @image.image? %>
-	  <br>
+  <b>Thumb:</b>
+  <%= image_tag(@image.image.thumb.url) if @image.image? %>
+  <br>
 
-	 	<b>Small:</b>
-	  <%= image_tag(@image.image.small.url) if @image.image? %>
-	  <br>
+ 	<b>Small:</b>
+  <%= image_tag(@image.image.small.url) if @image.image? %>
+  <br>
 
-		<b>Medium:</b>
-	  <%= image_tag(@image.image.medium.url) if @image.image? %>
-	  <br>
+	<b>Medium:</b>
+  <%= image_tag(@image.image.medium.url) if @image.image? %>
+  <br>
 
-		<b>Large:</b>
-	  <%= image_tag(@image.image.large.url) if @image.image? %>
-	</p>
+	<b>Large:</b>
+  <%= image_tag(@image.image.large.url) if @image.image? %>
+</p>
 
-	<p>
-		<b>Exhibition ID:</b>
-		<%= @image.exhibition_id if @image.exhibition_id? %>
-		<br>
-		<b>Place ID:</b>
-		<%= @image.place_id if @image.place_id? %>
-	</p>
+<p>
+	<b>Exhibition ID:</b>
+	<%= @image.exhibition_id if @image.exhibition_id? %>
+	<br>
+	<b>Place ID:</b>
+	<%= @image.place_id if @image.place_id? %>
+</p>
 
 
-	<%= link_to 'Edit', edit_image_path(@image) %> |
-	<%= link_to 'Back', images_path %>
-</section>
+<%= link_to 'Edit', edit_image_path(@image) %> |
+<%= link_to 'Back', images_path %>
