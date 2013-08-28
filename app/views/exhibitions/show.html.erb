@@ -2,11 +2,13 @@
 
   <h1><%= @exhibition.title %></h1>
 
-<ul class="bxslider">
-   <% @exhibition.images.each do |i| %>
-   <li><%= image_tag(i.image.url) %></li>
-  <% end %>
-</ul>
+<% if exhibition.images %>
+	<ul class="bxslider">
+	   <% @exhibition.images.each do |i| %>
+	   <li><%= image_tag(i.image.url) %></li>
+	  <% end %>
+	</ul>
+<% end %>
 
   <p> <%= @exhibition.description %> </p>
   <p> <%= @exhibition.location %> | <%= @exhibition.date %> </p>
