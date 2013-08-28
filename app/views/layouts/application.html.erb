@@ -17,16 +17,19 @@
 		     <span class="icon-bar"></span>
 		    </a>
 		    <%= link_to "JULIAN CHAMS", "/static_pages/home", {:class=>"brand pull-left"} %>
-			    <div class="nav-collapse collapse">
-			     <ul class="nav">
-			      <li><%= link_to "Work", "/static_pages/work" %></li>
-			      <li><%= link_to "Exhibitions", "/static_pages/exhibitions" %></li>
-			      <li><%= link_to "About", "/static_pages/about" %></li>
-			      <!-- under construction <li><%= link_to "Texts", "/static_pages/texts" %></li> -->
-			      <li><%= link_to "Blog", "/static_pages/blog" %></li>
-			      <li><%= link_to "Links", "/static_pages/links" %></li>
-			     </ul>
-			    </div>
+		    <div class="nav-collapse collapse">
+		     <ul class="nav">
+		      <li><%= link_to "Work", "/static_pages/work" %></li>
+		      <li><%= link_to "Exhibitions", exhibitions_path %></li>
+		      <li><%= link_to "About", "/about" %></li>
+		      <!-- under construction <li><%= link_to "Texts", "/static_pages/texts" %></li> -->
+		      <li><%= link_to "Blog", "/static_pages/blog" %></li>
+		      <li><%= link_to "Links", "/static_pages/links" %></li>
+		      <% if user_signed_in? %>
+		      	<li><%= link_to "Log Out", destroy_user_session_path, :method => :delete %></li>
+		      <% end %>
+		     </ul>
+		    </div>
 		   </div>
 		  </nav>
 		</header>

@@ -24,10 +24,12 @@ class StaticPagesController < ApplicationController
   def links
   end
 
-  private
+    private
     def set_profile
-      user=User.first
-      @profile = user.profile
+      if User.any?
+        user=User.first
+        @profile = user.profile
+      end
     end
 
 end

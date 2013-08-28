@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 gem 'bootstrap-sass', '2.1'
+
 gem 'carrierwave'
 gem 'fog'
 gem 'mini_magick'
@@ -9,10 +10,14 @@ gem 'nested_form'
 gem 'jquery-fileupload-rails'
 gem 'devise'
 
+gem 'unicorn'
+gem 'foreman'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development do
+gem 'unicorn-rails'
+
 gem 'sqlite3', '1.3.5'
 gem 'better_errors'
 gem 'quiet_assets'

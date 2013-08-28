@@ -1,66 +1,32 @@
 <section>
     
   <p id="notice"><%= notice %></p>
-  
-  <%= nested_form_for @exhibition, :html=>{:multipart => true } do |f| %>
-  <% if @exhibition.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@exhibition.errors.count, "error") %> prohibited this exhibition from being saved:</h2>
-      <ul>
-        <% @exhibition.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-       <% end %>
-      </ul>
-    </div>
+
+  <h1><%= @exhibition.title %></h1>
+
+
+
+<ul class="bxslider">
+   <% @exhibition.images.each do |i| %>
+   <li><%= image_tag(i.image.url) %></li>
   <% end %>
-
-  <p>
-    <b>Title:</b>
-    <%= @exhibition.title %>
-  </p>
-
-  <p>
-    <b>Date:</b>
-    <%= @exhibition.date %>
-  </p>
-
-  <p>
-    <b>Location:</b>
-    <%= @exhibition.location %>
-  </p>
-
-  <p>
-    <b>Description:</b>
-    <%= @exhibition.description %>
-  </p>
+</ul>
 
 
-  <% @exhibition.images.each do |i| %>
-    <%= image_tag(i.image.url) %>
-  <% end %>
 
-  <fieldset id="images">
-  <%= f.fields_for :images do |image|  %>
-    <div class="field"
-      <%= image.label :title %><br/>
-      <%= image.text_area :title %>
-    </div>
-    <div class="field"
-      <%= image.label :image %><br/>
-      <%= image.file_field :image %>
-      <%= image.hidden_field :image_cache %>
-    </div>
-    <%= image.link_to_remove "Remove this image" %>
-  <% end %>
-  </fieldset>
 
-  <%= f.link_to_add "Add images", :images %>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <p> <%= @exhibition.description %> </p>
+  <p> <%= @exhibition.location %> | <%= @exhibition.date %> </p>
 
   <%= link_to 'Edit', edit_exhibition_path(@exhibition) %> |
   <%= link_to 'Back', exhibitions_path %>
-<% end %>
+
 </section>
+
+
+<%= javascript_include_tag "jquery.bxslider.min.js" %>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.bxslider').bxSlider();
+});
+</script>

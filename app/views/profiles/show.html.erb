@@ -18,8 +18,8 @@
 	  <%= @profile.tel %>
 	</p>
 		
+	<%= image_tag @profile.profile_pic.medium.url %>	
 
-	<%= link_to 'Edit', edit_profile_path(@profile) %> |
-	<%= link_to 'Back', exhibitions_path %>
-
+	<%= link_to 'Edit', edit_profile_path(@profile) %>
+	
 </section>

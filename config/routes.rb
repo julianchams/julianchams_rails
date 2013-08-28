@@ -16,11 +16,13 @@ JulianchamsRails::Application.routes.draw do
 
   root to: "static_pages#home"
 
+  #get 'about', to 'profiles#show'
+
+  match '/about' => 'static_pages#about'
+
   get "static_pages/home" 
 
   get "static_pages/about"
-
-  get "static_pages/exhibitions"
 
   get "static_pages/texts"
 
