@@ -2,7 +2,7 @@
 
   <h1><%= @exhibition.title %></h1>
 
-<% if exhibition.images %>
+<% if @exhibition.images %>
 	<ul class="bxslider">
 	   <% @exhibition.images.each do |i| %>
 	   <li><%= image_tag(i.image.url) %></li>

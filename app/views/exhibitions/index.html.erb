@@ -4,7 +4,7 @@
       <h1>EXHIBITIONS</h1>
 
       <% @exhibitions.each do |exhibition| %>
-        <% if exhibition.images %>
+        <% if @exhibition.images %>
           <%= image_tag exhibition.images.first.image.small.url %>
         <% end %>
         <h5><%= link_to exhibition.title, exhibition_path(exhibition) %></h5>
